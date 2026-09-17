@@ -1,0 +1,4 @@
+# Knitted/exported HTML is output, not source - keep it out of language stats
+*.html linguist-documentation
+# The analysis notebook runs an R kernel
+*.ipynb linguist-language=R
