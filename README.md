@@ -36,7 +36,3 @@ R · `glmnet` · `caret` · `pROC` · `car` · `rsample` · `dplyr` · `ggplot2`
 ## Running it
 
 Open `shopping_analysis.ipynb` in Jupyter with an R kernel (IRkernel) and run all cells. The dataset is loaded from a URL, so no download is needed. Packages: `install.packages(c("glmnet","caret","pROC","car","rsample","dplyr","ggplot2","ggpubr","corrplot","broom"))`.
-
-## Credits
-
-Group project for STAT 301 (UBC). EDA plots build on Sarah Chan's stage-2 work; modelling, selection and evaluation by Bryan Sun.
