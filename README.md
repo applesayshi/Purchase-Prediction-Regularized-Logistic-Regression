@@ -1,4 +1,4 @@
-# Online Shopping Purchase Prediction
+# Purchase Prediction: Regularized Logistic Regression
 
 Predicting whether an online shopping session ends in a purchase, using logistic regression with LASSO and ridge regularization in R.
 
@@ -22,12 +22,12 @@ Data: [Online Shoppers Purchasing Intention](https://archive.ics.uci.edu/dataset
 
 | Model | CV AUC | Features kept |
 | --- | --- | --- |
-| **LASSO (final)** | **0.911** | 3 |
-| Ridge | 0.893 | all |
+| **LASSO (final)** | **0.911** | 3 of 18 |
+| Ridge | 0.893 | all 18 |
 
 Final LASSO model on the held-out test set: **AUC 0.909**, accuracy 88.7%, sensitivity 0.377, balanced accuracy 0.677.
 
-LASSO kept only three predictors: `PageValues` (strongly positive), `ExitRates` (negative), and `Month = November`. The model ranks sessions well (high AUC) but still misses many true purchases, which is the expected consequence of the class imbalance — discussed at the end of the notebook along with next steps (resampling, tree-based models).
+L1 regularization cut 18 predictors down to three: `PageValues` (strongly positive), `ExitRates` (negative), and `Month = November`. The model ranks sessions well (high AUC) but still misses many true purchases, which is the expected consequence of the class imbalance — discussed at the end of the notebook along with next steps (resampling, tree-based models).
 
 ## Stack
 
@@ -39,4 +39,4 @@ Open `shopping_analysis.ipynb` in Jupyter with an R kernel (IRkernel) and run al
 
 ## Credits
 
-Group project for STAT 301 (UBC). EDA plots build on Sarah Chan's stage-2 work; modelling, selection and evaluation by Bryan.
+Group project for STAT 301 (UBC). EDA plots build on Sarah Chan's stage-2 work; modelling, selection and evaluation by Bryan Sun.
